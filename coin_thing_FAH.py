@@ -82,8 +82,9 @@ class dialog_show(qtw.QDialog):
             super().__init__()
             self.setWindowTitle("Coin Order")
             self.setFixedSize(500, 500)
-            
-            self.move(self.x()+ 1203, self.y())
+
+            # this one lowkenuinely idk use this if you want twin. . .
+            #self.move(self.x()+ 1203, self.y())
 
             self.order()
 
@@ -105,5 +106,6 @@ if __name__ == '__main__':
 
     coin = dialog_show.coin_order()
     coin.show()
+
 
     app.exec()
