@@ -65,15 +65,21 @@ class dialog_show(qtw.QDialog):
     def coin(self):
         layout = qtw.QVBoxLayout()
 
+        lab_heads = qtw.QLabel()
+        lab_heads.setText("Heads")
         heads = qtw.QTextBrowser()
         heads.wordWrapMode()
         heads.setText(f'{h}')
 
+        lab_tails = qtw.QLabel()
+        lab_tails.setText("Tails")
         tails = qtw.QTextBrowser()
         tails.wordWrapMode()
         tails.setText(f'{t}')
 
+        layout.addWidget(lab_heads)
         layout.addWidget(heads)
+        layout.addWidget(lab_tails)
         layout.addWidget(tails)
         self.setLayout(layout)
 
@@ -109,3 +115,4 @@ if __name__ == '__main__':
 
 
     app.exec()
+
